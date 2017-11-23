@@ -1,7 +1,7 @@
 WinSSHFS
 ========================
 
-Fork of Martin Dimov's WinSSHFS project. Removes the GUI, exposes clean library interface, adds a CLI.
+Fork of Asad Saeeduddin's WinSSHFS fork. Adds automatic ILmerge facilities so all assemblies are merged into a single executable.
 
 CLI usage is:
 
@@ -28,5 +28,32 @@ Copyright c  2017
                         attempted
 ```
 
-CI isn't set up yet, please clone the repo and build Sshfs/SSHFS.CLI using Visual Studio 2017.
+Prepare Git submodules
+========================
+
+```
+git submodule update --init --recursive
+```
+
+Build Instructions
+========================
+
+CLI
+
+```
+nuget install
+msbuild Sshfs\Sshfs.sln /p:Configuration=Release
+```
+
+Visual Studio
+
+```
+Install the Nuget dependencies using VS
+Build the solution in Release mode
+```
+
+
+The CLI application will now be located at Sshfs\SSHFS.CLI\bin\Release\SSHFS.CLI.exe
+
+
 
