@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Weavers>
+  <!-- This node is required for the Fody.Costura Nuget package. I use it to merge all the dll assemblies together into the single executable -->
+  <Costura />
+</Weavers>
